@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "fast-xml-parser": "^5.7.3"
+  }
+}

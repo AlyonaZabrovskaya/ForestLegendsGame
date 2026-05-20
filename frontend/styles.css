@@ -1,0 +1,467 @@
+body 
+{
+	margin: 0;
+	font-family: sans-serif;
+    background-color: #434b1b;
+    background-image: url("border.jpg");
+    overflow: hidden;
+    background-repeat: repeat-y;
+    background-size: 100%, 100%;
+    text-align: center;
+    color: white;
+}
+
+#variants 
+{
+	z-index: 3;
+    border: none;        
+    outline: none;       
+    appearance: none;    
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    background: none;
+    background-color: #fff8e7;
+    box-shadow: none;
+    position: fixed;
+    padding: 10px;
+    width: 75%;
+    color: #800000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    font-size: 1rem;
+    height: auto;
+    max-height: 20vh;
+    margin: 5px auto 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#question
+{
+	color: #fff8e7;
+	background-color: #800000;
+}
+
+#homePage
+{
+	position: relative;
+  	display: inline-block;
+}
+
+#logo 
+{
+  	z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 13%;
+    width: 75dvw;
+    height: 100dvh;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+#puskPlay
+{
+  	position: absolute;
+  	bottom: 40px; 
+  	text-align: center;
+  	right: 38%;
+  	padding: 10px 30px;
+  	background: rgba(0,0,0,0.6);
+  	color: white;
+  	border: none;
+  	cursor: pointer;
+}
+
+#newPlay
+{
+	position: absolute;
+  	bottom: 40px; 
+  	text-align: center;
+  	right: 38%;
+  	padding: 10px 30px;
+  	background: white;
+  	color: rgba(0,0,0,0.6);
+  	border: none;
+  	cursor: pointer;
+}
+
+#puskPlay, #newPlay
+{	
+	right: 8%;
+	z-index: 4;
+	position: absolute;
+}
+
+#puskPlay, #newPlay 
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#startPlay 
+{
+    z-index: 5;
+    background-image: url('start.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* чтобы картинка полностью покрывала кнопку */
+    transform: translate(-50%, -50%); /* центрирование */
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    height: 14dvh;
+    width: 10dvw;
+    bottom: 8%;
+    right: 18%;
+}
+
+#startPlay:hover
+{
+	background-color: transparent;
+	transform: scale(2);
+}
+
+#textString 
+{
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    line-height: 1.4;
+   	border-radius: 10px;
+   	text-align: center;
+   	margin: 0 auto;
+    order: 2;
+    width: 90%;
+    background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.45),
+    transparent
+    );
+}
+
+#imgString
+{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+#textBlock
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100dvh;
+}
+
+.my-btn
+{
+    text-align: center;
+    font-size: 200px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 5px double #b3cd32;
+    cursor: pointer;
+    padding: 20px;
+}
+
+@media (min-width:6400px)  
+{
+    #puskPlay, #newPlay
+	{	
+		right: 4%;
+		font-size: 7.5rem;
+        bottom: 5%;
+	}
+
+	#textBlock 
+	{
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    #textString 
+    {
+        font-size: 8.5rem;
+        max-width: 80dvw;
+    }
+
+    #variants 
+    {
+        font-size: 7.5rem;
+    }
+
+    #startPlay 
+    {
+        height: 14dvh;
+        width: 10dvw;
+        bottom: 8%;
+        right: 18%;
+    }
+
+}
+
+@media (min-width: 360px) and (max-width: 639px)/* 📱 Мобильная адаптация */ 
+{
+    #textString 
+    {
+        font-size: 1.2rem;
+        padding: 1px;
+        width: 90%;
+    }
+
+    #variants 
+    {
+        font-size: 1.0rem;
+        padding: 2px;
+    }
+
+    #puskPlay, #newPlay
+    {   
+        right: 2%;
+        font-size: 0.8rem;
+        bottom: 30%;
+    }
+
+    #textBlock 
+    {
+        max-width: 80dvw;
+        margin: 0 auto;
+    }
+
+    #imgString
+    {
+        left: 13%;
+        width: 75dvw;
+        height: 100dvh;
+    }
+
+    #startPlay 
+    {
+        height: 5dvh;
+        width: 12dvw;
+        bottom: 35%;
+        right: 10%;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 768px)/* 📱 Мобильная адаптация */ 
+{
+    #textString 
+    {
+        font-size: 1.1rem;
+        padding: 1px;
+    	width: 80%;
+    }
+
+    #variants 
+    {
+        font-size: 0.6rem;
+        padding: 1px;
+    }
+
+    #puskPlay, #newPlay
+	{	
+		right: 1%;
+		font-size: 0.8rem;
+        bottom: 10%;
+	}
+
+	#textBlock 
+	{
+        max-width: 80dvw;
+        margin: 0 auto;
+    }
+
+    #startPlay 
+    {
+        height: 15dvh;
+        width: 8dvw;
+        bottom: 10%;
+        right: 20%;
+    }
+}
+
+@media (min-width:769px) and (max-width:1119px)  
+{
+    #puskPlay, #newPlay
+    {   
+        right: 0.2%;
+        font-size: 0.9rem;
+        bottom: 15%;
+    }
+
+    #textBlock 
+    {
+        max-width: 80dvw;
+        margin: 0 auto;
+    }
+
+    #textString 
+    {
+        font-size: 0.8rem;
+        width: 75dvw;
+    }
+
+    #variants 
+    {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width:1120px) and (max-width:1440px)  
+{
+    #puskPlay, #newPlay
+	{	
+		right: 0.5%;
+		font-size: 1.5rem;
+	}
+
+	#textBlock 
+	{
+        max-width: 80dvw;
+        margin: 0 auto;
+    }
+
+    #textString 
+    {
+	   font-size: 1.7rem;
+        width: 65dvw;
+    }
+
+    #variants 
+    {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width:1441px) and (max-width:2143px)  
+{
+    #puskPlay, #newPlay
+	{	
+		right: 1.2%;
+		font-size: 2.2rem;
+	}
+
+	#textBlock 
+	{
+        max-width: 80dvw;
+        margin: 0 auto;
+    }
+
+    #textString 
+    {
+	   font-size: 2.0rem;
+        width: 65dvw;
+    }
+
+    #variants 
+    {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width:2144px) and (max-width:2400px)  
+{
+    #puskPlay
+    {   
+        right: 0.5%;
+        font-size: 2.5rem;
+    }
+    #newPlay
+    {   
+        right: 0.2%;
+        font-size: 2.5rem;
+    }
+
+    #textBlock 
+    {
+        max-width: 80dvw;
+        margin: 0 auto;
+    }
+
+    #textString 
+    {
+        font-size: 2.8rem;
+        width: 65dvw;
+    }
+
+    #variants 
+    {
+        font-size: 2.3rem;
+    }
+}
+
+@media (min-width:2401px) and (max-width:3839px)  
+{
+    #puskPlay, #newPlay
+	{	
+		right: 1.5%;
+		font-size: 4.0rem;
+	}
+
+	#textBlock 
+	{
+        max-width: 80dvw;
+        margin: 0 auto;
+    }
+
+    #textString 
+    {
+	   font-size: 4.0rem;
+       width: 65dvw;
+    }
+
+    #variants 
+    {
+        font-size: 3.0rem;
+    }
+}
+
+@media (min-width:3839px) and (max-width:6399px) 
+{
+    #puskPlay
+	{	
+		right: 1.5%;
+		font-size: 4.5rem;
+	}
+
+    #newPlay
+    {   
+        right: 0.2%;
+        font-size: 4.0rem;
+    }
+
+	#textBlock 
+	{
+        max-width: 80dvw;
+        margin: 0 auto;
+    }
+
+    #textString 
+    {   
+        font-size: 4.5rem;
+        width: 70dvw;
+    }
+
+    #variants 
+    {
+        font-size: 4.5rem;
+    }
+}
